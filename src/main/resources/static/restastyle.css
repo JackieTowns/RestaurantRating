@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+body{
+	font-size: 20px; 
+}
+
+h1{
+	text-align: center; 
+	font-weight: bold; 
+}
+#table2{
+	width: 50%; 
+	text-align: center; 
+	float:center; 
+	margin: 100px 300px 300px 300px; 
+}
