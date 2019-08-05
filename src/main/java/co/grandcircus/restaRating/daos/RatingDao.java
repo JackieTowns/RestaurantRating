@@ -40,4 +40,28 @@ public class RatingDao {
 		em.remove(ratings);
 	}
 
+	public void upvote(long id) {
+		Rating upvote = em.getReference(Rating.class, id);
+		int up = upvote.getRating() + 1;
+		if (up > 10) {
+			upvote.setRating(10);
+		} else {
+			upvote.setRating(up);
+		}
+
+		em.merge(upvote);
+	}
+
+	public void downvote(long id) {
+		Rating downvote = em.getReference(Rating.class, id);
+		int down = downvote.getRating() - 1;
+		if (down < 0) {
+			downvote.setRating(0);
+		} else {
+			downvote.setRating(down);
+		}
+
+		em.merge(downvote);
+	}
+
 }

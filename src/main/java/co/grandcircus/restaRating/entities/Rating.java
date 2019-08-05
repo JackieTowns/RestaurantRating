@@ -16,7 +16,6 @@ public class Rating {
 	Long id;
 	String name;
 	int rating;
-	// int numberValue = 0;
 
 	public Rating() {
 
